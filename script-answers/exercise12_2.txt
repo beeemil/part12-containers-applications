@@ -1,0 +1,10 @@
+Script started on 2024-09-23 12:18:59+03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="161" LINES="26"]
+(base) ]0;user@user-ThinkPad-T15g-Gen-2i: ~/Documents/part12-containers-applications[01;32muser@user-ThinkPad-T15g-Gen-2i[00m:[01;34m~/Documents/part12-containers-applications[00m$ docker run -it ubuntu bash
+[?2004h]0;root@460d1ef3ddb8: /root@460d1ef3ddb8:/# mkdir /user  r(/  /src/app
+[?2004l[?2004h]0;root@460d1ef3ddb8: /root@460d1ef3ddb8:/# touch /use r( /src/app/index.jks  s
+[?2004l[?2004h]0;root@460d1ef3ddb8: /root@460d1ef3ddb8:/# [Kexit
+[?2004lexit
+(base) ]0;user@user-ThinkPad-T15g-Gen-2i: ~/Documents/part12-containers-applications[01;32muser@user-ThinkPad-T15g-Gen-2i[00m:[01;34m~/Documents/part12-containers-applications[00m$ exit
+exit
+
+Script done on 2024-09-23 12:19:50+03:00 [COMMAND_EXIT_CODE="0"]

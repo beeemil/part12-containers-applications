@@ -33,7 +33,7 @@ const TodoView = () => {
     })
     refreshTodos()
   }
-
+  console.log('todos',todos)
   return (
     <>
       <h1>Todos</h1>

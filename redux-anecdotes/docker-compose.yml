@@ -1,0 +1,36 @@
+services:
+  app:
+    image: anecdote-frontend
+    build:
+      context: ./frontend/
+      dockerfile: ./frontend/Dockerfile
+      args:
+        - VITE_BACKEND_URL="http://localhost:8080/api/anecdotes"
+    ports:
+      - 5173:5173
+    volumes:
+      - ./frontend/:/usr/src/app
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8080/api/anecdotes
+    container_name: anecdote-frontend
+  debug-helper:
+    image: busybox
+  server:
+    image: anecdote-backend
+    ports:
+      - 3000:3000
+    build:
+      context: ./backend/
+      dockerfile: ./backend/Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+  nginx:
+    image: nginx:1.27.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy-redux-prod
+    depends_on:
+      - app
+      - server
